@@ -12,12 +12,12 @@ public class RollTheDice {
     	 * when converting the integer to a floating-point number and could change the values 
     	 * link: https://wiki.sei.cmu.edu/confluence/display/java/NUM13-J.+Avoid+loss+of+precision+when+converting+primitive+integers+to+floating-point
     	 */
-        float die1;   // The number on the first die.
-        float die2;   // The number on the second die.
+        int die1;   // The number on the first die.
+        int die2;   // The number on the second die.
         int roll;   // The total roll (sum of the two dice).
         
-        die1 = (float)(Math.random()*6) + 1;
-        die2 = (float)(Math.random()*6) + 1;        
+        die1 = (int)(Math.random()*6) + 1;
+        die2 = (int)(Math.random()*6) + 1;        
         roll = (int) (die1 + die2);
         
         System.out.println("The first die comes up " + die1);
@@ -33,7 +33,7 @@ public class RollTheDice {
          */
         int[] dice1rolls = new int[(int)die1];
         int[] dice2rolls = new int[(int)die2];
-        System.out.println(dice1rolls.equals(dice2rolls));
+        System.out.println(Arrays.equals(dice1rolls, dice2rolls));
         
     }  // end main()
  
