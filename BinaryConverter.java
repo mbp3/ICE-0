@@ -39,6 +39,10 @@ public class BinaryConverter {
     
     // issue in this method
     public static boolean all0sAnd1s(String val){
+    	/*
+    	 * 3. This violates rule 03 NUM09-J as you shouldn't use a floating-point number as a loop counter
+    	 * link: https://wiki.sei.cmu.edu/confluence/display/java/NUM09-J.+Do+not+use+floating-point+variables+as+loop+counters
+    	 */
         assert val != null : "Failed precondition all0sAnd1s. parameter cannot be null";
         boolean all = true;
         float i = 0;
