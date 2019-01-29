@@ -36,14 +36,16 @@ public class BinaryConverter {
      * pre: cal != null
      * post: return true if val consists only of characters 1 and 0, false otherwise
      */
+    
+    // issue in this method
     public static boolean all0sAnd1s(String val){
         assert val != null : "Failed precondition all0sAnd1s. parameter cannot be null";
         boolean all = true;
-        int i = 0;
+        float i = 0;
         char c;
         
         while(all && i < val.length()){
-            c = val.charAt(i);
+            c = val.charAt((int) i);
             all = c == '0' || c == '1';
             i++;
         }
