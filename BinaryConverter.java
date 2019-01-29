@@ -45,7 +45,7 @@ public class BinaryConverter {
     	 */
         assert val != null : "Failed precondition all0sAnd1s. parameter cannot be null";
         boolean all = true;
-        float i = 0;
+        int i = 0;
         char c;
         
         while(all && i < val.length()){
